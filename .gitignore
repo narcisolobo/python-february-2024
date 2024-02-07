@@ -1,0 +1,6 @@
+.vscode
+.DS_Store
+bootstrap
+node_modules
+package.json
+pnpm-lock.yaml
