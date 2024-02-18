@@ -6,7 +6,7 @@ In Python, we can categorize data types into two main groups: **primitive** (or 
 - Strings (`str`): Represents sequences of characters enclosed in quotes, e.g., "hello", 'world'.
 - Integers (`int`): Represents whole numbers, e.g., 1, -5, 100.
 - Floating-Point Numbers (`float`): Represents decimal numbers, e.g., 3.14, -0.5, 2.0.
-- Booleans (`bool`): Represents truth values True or False.
+- Booleans (`bool`): Represents the values `True` or `False`.
 - None (`NoneType`): Represents the absence of a value or null.
 
 ## Composite (Complex) Data Types:
