@@ -90,12 +90,9 @@ Booleans represent the value of True or False.
 
 # Literal assignment
 
-# snake case - every letter is lowercase and
-# every word is separated by an underscore
-
 # Constructor function (casting)
 
-# Logical operators tomorrow
+# Logical operators during lecture
 
 """
 === === INTEGERS AND FLOATS === ===
