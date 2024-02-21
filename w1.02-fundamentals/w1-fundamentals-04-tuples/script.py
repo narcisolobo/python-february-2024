@@ -9,6 +9,6 @@ Tuples are written with round brackets (parentheses).
 
 # Tuple creation
 
-# Tuple items are zero-indexed.
+# colors[0] = "blue"
 
-# count() and index()
+# Tuple items are zero-indexed.
