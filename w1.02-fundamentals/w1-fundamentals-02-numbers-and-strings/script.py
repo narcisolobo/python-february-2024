@@ -15,29 +15,70 @@ in quotes.
 # String creation:
 # snake_case
 
+# variable name rules
+# can't start with a number
+# can't have a hyphen
+# can't use reserved keywords
+
 # Literal assignment
+my_greeting = "hello world"
 
 # Constructor function (casting)
+greeting_2 = str("Another greeting")
 
 # Print function
+print(my_greeting)
 
 # Type function
+print(type(my_greeting))
 
 # Concatenation
+hello = "hello"
+world = "world!"
+
+hello_world = hello + " " + world
+print(hello_world)
+
+# f-string
+print(f"{hello} big {world}")
+print(hello + " " + "big" + " " + world)
 
 # TypeError
+num = 10
+sentence = "my age is "
+# print(sentence + num)
 # Fix
+print(sentence + str(num))
+
+print(type(str(num)))
 
 # String Methods
 # `rsplit()` splits a string based on a separator
+stack = "Python world"
+print([*stack])
 
 # upper, lower, title
+print(stack.upper())
+print(stack.lower())
+print(stack.title())
+
+print(stack.center(50, "*"))
 
 # length
+print(len(stack))
 
 # strip
+whitespace_string = "      hello          "
+print(whitespace_string)
+print(whitespace_string.strip())
 
 # string indices, index ranges
+guitar = "fender"
+print(guitar[0])
+# slicing with index ranges
+print(guitar[:3])
+# negative index
+print(guitar[-2])
 
 # Explore more string methods!
 # https://www.w3schools.com/python/python_ref_string.asp
