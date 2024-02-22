@@ -1,3 +1,5 @@
+import math
+
 """
 PRIMITIVE (SIMPLE) DATATYPES
 - Strings (str)
@@ -80,19 +82,33 @@ print(guitar[:3])
 # negative index
 print(guitar[-2])
 
+# the .format method
+fave1 = "Bill Withers"
+fave2 = "Curtis Mayfield"
+
+print("FORMAT".center(50, "*"))
+print("My top two musicians are {} and {}".format(fave1, fave2))
+print("FORMAT".center(50, "*"))
+
+# %-Formatting
+hw = "Hello %s" % "world"  # with literal values
+py = "I love Python %d" % 3
+print("LOOK HERE!!!!!", hw, py)
+# output: Hello world I love Python 3
+name = "Zen"
+age = 27
+print("My name is %s and I'm %d" % (name, age))  # or with variables
+# output: My name is Zen and I'm 27
+
+sentence = "My %(instrument)s is a %(brand)s"
+
+print("*" * 50)
+print(sentence % {"brand": "Fender", "instrument": "guitar"})
+print("*" * 50)
+
+
 # Explore more string methods!
 # https://www.w3schools.com/python/python_ref_string.asp
-
-"""
-=== === BOOLEANS === ===
-Booleans represent the value of True or False.
-"""
-
-# Literal assignment
-
-# Constructor function (casting)
-
-# Logical operators during lecture
 
 """
 === === INTEGERS AND FLOATS === ===
@@ -101,30 +117,78 @@ decimal numbers.
 """
 
 # Integer literal assignment
+num = 4
 
 # Constructor function (casting)
+string_num = "4"
+int_num = int(string_num)
+print(type(int_num))
 
 # Float literal assignment
+pi = 3.14159
+print(type(pi))
 
 # Constructor function (casting)
+float_num = float(num)
+print(type(float_num))
 
 # Arithmetic operations
 # +, -, *, /, **, //
+print(2**3)
+print(4 // 2)
 
 # +=, -=, *=, /= assignment operators
+other_num = 4
+new_num = 2
+new_num += other_num
+
+print(new_num)
+
+new_num -= 3
+print(new_num)
+
+new_num *= 3
+print(new_num)
+
+new_num /= 2
+print(new_num)
 
 # Built-in functions for numbers
 
 # abs, round
+print(abs(-3.5))
+print(round(3.14159))
 
 # Math module
 
 # sqrt, ceil, floor
+print(math.sqrt(9))
+print(math.ceil(2.00000001))
+print(math.floor(35.9999999999))
+
+"""
+=== === BOOLEANS === ===
+Booleans represent the value of True or False.
+"""
+
+# Literal assignment
+is_awake = False
+# Constructor function (casting)
+is_sleeping = bool(65465)  # True
+print(is_sleeping)
+
+# Logical operators during lecture
 
 """
 === === NONE === ===
 None represents the absence of a value.
+like the javascript null
 """
 # None literal assignment
+email = None
+print("the type of email is:", type(email))
 
 # Why use None?
+
+# printing with commas
+print("hello", "world")

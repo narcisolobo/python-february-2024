@@ -1,4 +1,17 @@
 """
+=== === CONDITIONALS === ===
+"""
+
+num = 11
+
+if num > 10:
+    print(f"{num} is greater than 10")
+elif num > 3:
+    print(f"{num} is greater than 3")
+else:
+    print(f"{num} is not greater than 10 or 3")
+
+"""
 === === CONDITIONALS EXERCISE === ===
 Write a Python program that takes an integer input
 from the user and checks whether it is positive,
@@ -16,3 +29,13 @@ Enter a number: -3
 Enter a number: 0
 0 is neither positive nor negative.
 """
+
+user_num = int(input("Enter a number:"))
+print("You chose ", user_num)
+
+if user_num < 0:
+    print(f"{user_num} is a negative number.")
+elif user_num > 0:
+    print(f"{user_num} is a positive number.")
+else:
+    print(f"{user_num} is neither positive nor negative.")
