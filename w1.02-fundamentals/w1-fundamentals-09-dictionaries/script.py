@@ -20,8 +20,11 @@ strat = {
 
 # We can access values in a dictionary by their
 # key names. Use bracket notation with quotes.
+print(strat["model"])
 
 # Accessing values with the get() method
+print(strat.get("non-existent-key"))
+# print(strat["colors"])
 
 # We can access values in a dictionary with the get()
 # method. Pass the key name in the method call in quotes.)
@@ -37,11 +40,30 @@ strat = {
 === === DICTIONARY MANIPULATION === ===
 """
 # Bracket notation
+strat = {
+    "brand": "Fender",
+    "model": "Stratocaster",
+    "year": 1977,
+    "color": "blue",
+    "is_new": False,
+}
+
+# setting a value in a dictionary using bracket notation
+strat["color"] = "red"
+print(strat)
 
 # Testing for an existing key
 # in, not in
+
+key = "hello"
+
+# if key not in strat:
+#     print(f"{key} key not in strat")
 
 # We can use the 'in' and 'not in' keywords to check if a key
 # name exists in a dictionary.
 
 # Removing values with pop() and del
+
+# strat.pop("model")
+# print(strat)

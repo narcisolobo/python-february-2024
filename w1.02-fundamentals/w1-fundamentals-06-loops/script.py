@@ -1,16 +1,38 @@
+import random
+
 """
 === === LOOPS === ===
 """
 
 # Looping over lists and strings
+superheroes = [
+    "Spider-Man",
+    "Captain Marvel",
+    "Batman",
+    "Hulk",
+    "Thor",
+    "Dr. Manhattan",
+]
+
 
 # for-in loops
 
+""""
 # using range()
+# range takes in start, stop, and step
+for i in range(len(superheroes)):
+    print(superheroes[i])
 
 # without range()
+for cosplayer in superheroes:
+    print(cosplayer)
 
 # while loops
+x = 0
+while x < len(superheroes):
+    print(superheroes[x])
+    x += 1
+"""
 
 """
 === === FOR-IN LOOPS EXERCISE === ===
@@ -23,6 +45,16 @@ Example Output:
 Enter the numbers separated by spaces: 10 20 30 40 50
 The sum of the numbers is: 150
 """
+
+# print("Enter the numbers separated by spaces:")
+# num_string = input()
+# sum = 0
+# nums = num_string.split(" ")
+# print(nums)
+# for num in nums:
+#     sum += int(num)
+# print(sum)
+
 
 """
 === === WHILE LOOPS EXERCISE === ===
@@ -46,3 +78,17 @@ Too low, try again.
 Guess the number (between 1 and 100): 45
 Congratulations! You guessed the number correctly.
 """
+
+target = random.randint(1, 100)
+
+guess = int(input("Guess the number (between 1 and 100):"))
+
+while guess != target:
+    if guess > target:
+        print(f"{guess} is too high, try again.")
+        guess = int(input("Guess the number (between 1 and 100):"))
+    else:
+        print(f"{guess} is too low, try again.")
+        guess = int(input("Guess the number (between 1 and 100):"))
+
+print("Congratulations! You guessed the number correctly.")

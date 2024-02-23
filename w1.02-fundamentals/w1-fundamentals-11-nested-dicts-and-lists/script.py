@@ -1,3 +1,5 @@
+from pprint import pprint
+
 """
 === === NESTED DICTIONARIES & LISTS === ===
 Nesting is also allowed in dictionaries. In other words,
@@ -15,10 +17,17 @@ monty_python = [
 ]
 
 # Add Michael Palin to the list.
+monty_python.append({"first_name": "Michael", "last_name": "Palin"})
+pprint(monty_python)
 
 # Getting and Setting Values in Nested Dictionaries
 # Print "Gilliam".
+
+print(monty_python[2]["last_name"])
+
 # Change "John" to "Johnathan".
+monty_python[1]["first_name"] = "Johnathan"
+pprint(monty_python)
 
 instrument_brands = {
     "electric_guitars": ["Les Paul", "Fender", "PRS"],

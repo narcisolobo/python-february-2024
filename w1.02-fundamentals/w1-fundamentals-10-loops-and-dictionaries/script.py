@@ -13,11 +13,11 @@ strat = {
     "is_new": False,
 }
 
-for each_key in strat:
-    print(each_key)
+# for each_key in strat:
+#     print(each_key)
 
-for each_key in strat:
-    print(strat[each_key])
+# for each_key in strat:
+#     print(strat[each_key])
 
 """
 === === DICTIONARY METHODS === ===
@@ -29,3 +29,19 @@ keys(), values(), items()
 .values() - returns a list of the dictionary's values.
 .items() - returns a list of tuples of the dictionary's key-value pairs.
 """
+
+print(strat.keys())
+print(strat.values())
+print(strat.items())
+
+# what we got back from .items()
+[
+    ("brand", "Fender"),
+    ("model", "Stratocaster"),
+    ("year", 1977),
+    ("color", "blue"),
+    ("is_new", False),
+]
+
+for key, val in strat.items():
+    print(f"Key: {key}, Value: {val}")

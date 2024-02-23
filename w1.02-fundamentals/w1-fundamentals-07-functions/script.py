@@ -18,7 +18,37 @@ Enter the numbers separated by spaces: 10 20 30 40 50
 The average is: 30.0
 """
 
+
+def calculate_average():
+    num_string = input("Enter the numbers separated by spaces:")
+    num_list = num_string.split(" ")
+    for i in range(len(num_list)):
+        num_list[i] = int(num_list[i])
+    print(num_list)
+    sum = 0
+    for num in num_list:
+        sum = sum + num
+    print(sum)
+    print(f"The average is: {sum / len(num_list)}")
+
+
+# calculate_average()
+
 # Default parameters and named arguments
+
+
+def greet(name="Guest"):
+    print("Hello, " + name + "!")
+
+
+# greet()
+
+
+def greet(greeting, name):
+    print(greeting + ", " + name + "!")
+
+
+# greet()
 
 """
 === === DEFAULT PARAMETERS AND NAMED ARGUMENTS EXERCISE === ===
