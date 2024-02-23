@@ -38,11 +38,22 @@ instrument_brands = {
 # Add another key to the dictionary - "acoustic_guitars".
 # Make its value an empty list.
 
+print("before:", instrument_brands)
+instrument_brands["acoustic_guitars"] = []
+print("after:", instrument_brands)
+
 # Add "Martin" and "Taylor" to the acoustic_guitars list.
+instrument_brands["acoustic_guitars"].append("Martin")
+instrument_brands["acoustic_guitars"].append("Taylor")
+print(instrument_brands)
 
 # Getting and Setting Values in Nested Lists
 # Print "Deering".
+print(instrument_brands["banjos"][0])
 # Change "PRS" to "Paul Reed Smith".
+instrument_brands["electric_guitars"][2] = "Paul Reed Smith"
+print(instrument_brands)
+
 
 """
 === === LET'S LOOP! === ===
@@ -50,21 +61,39 @@ instrument_brands = {
 
 # Loop through the Monty Python list, printing each key of
 # each nested dictionary
+for each_dictionary in monty_python:
+    for each_key in each_dictionary:
+        print(each_key)
 
 # Loop through the Monty Python list, printing each value of
 # each nested dictionary
+for each_dictionary in monty_python:
+    for each_key in each_dictionary:
+        print(each_dictionary[each_key])
 
 # Loop through the Monty Python list, printing each key and
 # value of each nested dictionary
+for each_dictionary in monty_python:
+    for each_key in each_dictionary:
+        print(f"{each_key}: {each_dictionary[each_key]}")
 
 # Loop through the instrument_brands dictionary, printing
 # the length of each nested list
+for each_key in instrument_brands:
+    print(len(instrument_brands[each_key]))
 
 # Loop through the instrument_brands dictionary, printing
 # each value of each nested list
+for each_key in instrument_brands:
+    for brand in instrument_brands[each_key]:
+        print(brand)
 
 # Loop through the instrument_brands dictionary, printing
 # the length of each nested list, each key, and each value
+for each_key in instrument_brands:
+    print(len(instrument_brands[each_key]), each_key)
+    for brand in instrument_brands[each_key]:
+        print(brand)
 
 # Expected output:
 """
