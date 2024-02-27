@@ -67,7 +67,7 @@ What is the data type of each column in the heroes table?
 </details>
 
 ## Entity Relationship Diagrams
-In this course, we will be using the Entity Relationship Diagrams (ERDs) to design our tables.
+In this course, we will be using Entity Relationship Diagrams (ERDs) to design our tables.
 
 An Entity Relationship Diagram (ERD) is a visual representation of the tables within a database and the relationships between them.
 
