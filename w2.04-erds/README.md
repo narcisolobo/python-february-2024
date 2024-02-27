@@ -188,12 +188,12 @@ For example, let's say our `users` table has `id` and `username` columns, our `p
 ![many-to-many-users](./assets/many-to-many-users.png)
 
 **posts table:**  
-![many-to-many-posts](./assets/many-to-many-posts.png)
-*Why does this table have a `user_id` column?*
+![many-to-many-posts](./assets/many-to-many-posts.png)  
+*Why does this table have a `user_id` column?*  
 *What relationship does it represent?*
 
 **likes table:**  
-![many-to-many-likes](./assets/many-to-many-likes.png)
+![many-to-many-likes](./assets/many-to-many-likes.png)  
 *This table has two foreign keys.*
 
 Each row in the `likes` table represents a user liking a specific post, with references to both the user and the post via their respective IDs.
