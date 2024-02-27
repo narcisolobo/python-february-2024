@@ -184,15 +184,15 @@ This relationship facilitates:
 
 For example, let's say our `users` table has `id` and `username` columns, our `posts` table has `id`, `content`, and `user_id` columns, and our `likes` table has `user_id` and `post_id` columns.
 
-**users table:**
+**users table:**  
 ![many-to-many-users](./assets/many-to-many-users.png)
 
-**posts table:**
+**posts table:**  
 ![many-to-many-posts](./assets/many-to-many-posts.png)
 *Why does this table have a `user_id` column?*
 *What relationship does it represent?*
 
-**likes table:**
+**likes table:**  
 ![many-to-many-likes](./assets/many-to-many-likes.png)
 *This table has two foreign keys.*
 
