@@ -194,7 +194,7 @@ For example, let's say our `users` table has `id` and `username` columns, our `p
 
 **likes table:**  
 ![many-to-many-likes](./assets/many-to-many-likes.png)  
-*This table has two foreign keys.*
+*This table has two foreign key columns.*
 
 Each row in the `likes` table represents a user liking a specific post, with references to both the user and the post via their respective IDs.
 
