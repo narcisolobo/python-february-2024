@@ -1,4 +1,5 @@
 # Virtual Environments
+[Click here for the steps to create a virtual environment.](./steps.md)
 
 ## What is a virtual environment?
 
