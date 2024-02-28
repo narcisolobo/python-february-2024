@@ -13,8 +13,8 @@ strat = {
     "is_new": False,
 }
 
-# for each_key in strat:
-#     print(each_key)
+for banana in strat:
+    print(banana)
 
 # for each_key in strat:
 #     print(strat[each_key])

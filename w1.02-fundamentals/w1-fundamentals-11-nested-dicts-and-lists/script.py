@@ -16,6 +16,17 @@ monty_python = [
     {"first_name": "Terry", "last_name": "Jones"},
 ]
 
+# Loop through the list of dictionaries with a nested for loop
+# and the .items method
+print("LOOK HERE BRO".center(50, "="))
+for comedian in monty_python:
+    output = ""
+    for key, val in comedian.items():
+        output += f"{key} - {val}, "
+    print(output[:-2])
+print("*****************")
+
+
 # Add Michael Palin to the list.
 monty_python.append({"first_name": "Michael", "last_name": "Palin"})
 pprint(monty_python)
