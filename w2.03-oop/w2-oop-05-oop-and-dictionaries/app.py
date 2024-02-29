@@ -1,8 +1,17 @@
-# import the Hero class from the hero module
-# import the heroes list from the data module
+# Import the Hero class from the hero module
 
-# create a list of Hero objects using the
-# get_heroes class method
+# Import the heroes list and the izuku, tsuyu,
+# and fumikage dictionaries from the data module
 
-# iterate through the list to test if you were
-# successful
+# Create three Hero objects with the izuku, tsuyu,
+# and fumikage dictionaries
+
+# Call the display_info methods on each of the
+# Hero objects.
+
+# Create a list of Hero objects using the
+# get_heroes class method.
+
+# Iterate through the list and call the display_info
+# method on each Hero object in the list to test if
+# you were successful.
