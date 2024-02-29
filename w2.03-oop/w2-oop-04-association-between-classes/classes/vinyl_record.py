@@ -1,6 +1,3 @@
-from classes.collector import Collector
-
-
 class VinylRecord:
     """This class is a representation of a vinyl record."""
 
@@ -15,7 +12,7 @@ class VinylRecord:
         self.genre = data["genre"]
         self.plays = 0
         VinylRecord.num_records_created += 1
-        self.owner: Collector = None
+        self.owner = None
 
     @classmethod
     def reset_total_records(cls):

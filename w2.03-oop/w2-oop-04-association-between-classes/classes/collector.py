@@ -1,11 +1,7 @@
-from classes.vinyl_record import VinylRecord
-from typing import List
-
-
 class Collector:
     def __init__(self, name):
         self.name = name
-        self.collection: List[VinylRecord] = []
+        self.collection = []
 
     def add_record(self, record):
         # add a record to the collection
