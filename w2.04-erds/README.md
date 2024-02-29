@@ -28,7 +28,7 @@ Let's see what our heroes list might look like in a spreadsheet.
 
 ![heroes-spreadsheet](./assets/heroes-spreadsheet.png)
 
-As we can see, each hero can be a row in a spreadsheet, and each hero shares the same columns. Furthermore, each column correlates to an attribute of our `Hero` class.
+As we can see, our Hero objects can be represented by rows and columns in a spreadsheet.
 
 Now let's see what they might look like in a MySQL table.
 
@@ -71,7 +71,7 @@ In this course, we will be using Entity Relationship Diagrams (ERDs) to design o
 
 An Entity Relationship Diagram (ERD) is a visual representation of the tables within a database and the relationships between them.
 
-For those of you on Windows and Macs running OS Ventura or earlier, we will be using MySQL Workbench to design our databases and create ERDs. T[he platform has an excellent walkthrough here](https://login.codingdojo.com/m/506/12461/110429).
+For those of you on Windows and Macs running OS Ventura or earlier, we will be using MySQL Workbench to design our databases and create ERDs. [The platform has an excellent walkthrough here](https://login.codingdojo.com/m/506/12461/110429).
 
 For Macs running OS Sonoma (the latest MacOS), we will be using a VS Code extension called [ERD Editor](https://marketplace.visualstudio.com/items?itemName=dineug.vuerd-vscode). Here is a [link to a slide presentation](https://docs.google.com/presentation/d/1tY9dmx2ighhSHE5UXNkcMCW89beGezDZv2GGdiWwb74/edit#slide=id.p) walking you through the process.
 
