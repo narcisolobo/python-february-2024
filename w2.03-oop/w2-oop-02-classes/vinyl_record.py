@@ -47,7 +47,7 @@ still_bill_data = {
 }
 
 blizzard_data = {
-    "title": "Blizzard of Oz",
+    "title": "Blizzard of Ozz",
     "genre": "Metal",
     "artist": "Ozzy Osbourne",
     "release_year": 1980,
@@ -78,3 +78,5 @@ blizz.play_record()
 blizz.play_record()
 blizz.play_record()
 print(blizz.plays)
+
+# VinylRecord.play_record() ERROR
