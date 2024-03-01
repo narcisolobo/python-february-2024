@@ -114,3 +114,24 @@ heroes = [
         "quirk": "Creation",
     },
 ]
+
+izuku = {
+    "name": "Izuku Midorya",
+    "hero_name": "Deku",
+    "kanji_name": "緑谷 出久",
+    "quirk": "One for All",
+}
+
+tsuyu = {
+    "name": "Tsuyu Asui",
+    "hero_name": "Froppy",
+    "kanji_name": "蛙吹 梅雨",
+    "quirk": "Frog",
+}
+
+fumikage = {
+    "name": "Fumikage Tokoyami",
+    "hero_name": "Jet-Black Hero: Tsukuyomi",
+    "kanji_name": "踏陰 常闇",
+    "quirk": "Dark Shadow",
+}
