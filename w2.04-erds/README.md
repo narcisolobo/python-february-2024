@@ -76,13 +76,14 @@ For those of you on Windows and Macs running OS Ventura or earlier, we will be u
 For Macs running OS Sonoma (the latest MacOS), we will be using a VS Code extension called [ERD Editor](https://marketplace.visualstudio.com/items?itemName=dineug.vuerd-vscode). Here is a [link to a slide presentation](https://docs.google.com/presentation/d/1tY9dmx2ighhSHE5UXNkcMCW89beGezDZv2GGdiWwb74/edit#slide=id.p) walking you through the process.
 
 **Reminders:**
-1. Table names are **plural**, **lower case** and **snake_case** (e.g. `users`).
-2. Column names are lower case and snake_case (e.g. `first_name`).
-3. Edit the `id` column name to just `id` (it defaults to something else).
-4. Be sure to check the `AI` checkbox for the `id` column to have MySQL auto-increment it.
-5. It's a good idea to check the `NN` checkbox for any column that does not auto-increment or have a default.
-6. The `created_at` column should have a default expression of `CURRENT_TIMESTAMP`. Make sure the data type is `DATETIME`, then you can right-click to select the default expression.
-7. The `updated_at` column should have a default expression of `CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP`. Make sure the data type is `DATETIME`, then you can right-click to select the default expression.
+1. Schema/database names are **lower case**, **snake_case**, and should end in `db` or `schema` (e.g. `users_db`, `puppy_book_schema`, `star_wars_db`).
+2. Table names are **plural**, **lower case** and **snake_case** (e.g. `users`, `puppies`, `characters`).
+3. Column names are **lower case** and **snake_case** (e.g. `first_name`, `breed`, `planet`).
+4. Edit the `id` column name to just `id` (it defaults to something else).
+5. Be sure to check the `AI` checkbox for the `id` column to have MySQL auto-increment it.
+6. It's a good idea to check the `NN` checkbox for any column that does not auto-increment or have a default value.
+7. The `created_at` column should have a default expression of `CURRENT_TIMESTAMP`. Make sure the data type is `DATETIME`, then you can right-click in the `DEFAULT` section to select the default expression.
+8. The `updated_at` column should have a default expression of `CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP`. Make sure the data type is `DATETIME`, then you can right-click in the `DEFAULT` section to select the default expression.
 
 ### Important:
 - MySQL Workbench students - save your ERD files and include them with your assignment submissions. They'll have a file extension of `mwb`.
