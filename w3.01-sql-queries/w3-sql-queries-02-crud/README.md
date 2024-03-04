@@ -1,5 +1,7 @@
 # CRUD Queries
 
+*Note: MySQL Workbench students - [forward engineer](https://login.codingdojo.com/m/506/12462/87402) before trying these queries. ERD Editor students - execute the generated SQL [as per the slideshow](https://docs.google.com/presentation/d/1tY9dmx2ighhSHE5UXNkcMCW89beGezDZv2GGdiWwb74/edit#slide=id.g287d51aab8d_0_383).*
+
 CRUD is an acronym for Create, Read, Update and Destroy. In this section of the stack, we'll be writing SQL statements to perform CRUD operations.
 
 ## CRUD to SQL
