@@ -22,3 +22,10 @@ WHERE id = 4;
 INSERT INTO users (first_name, last_name, email, password)
 VALUES
 ("Gladys", "Knight", "gladys@thepips.com", "midnighttrain");
+
+INSERT INTO pets (name, type, age, is_derpy, user_id)
+VALUES ("Jinja", "Puppy", 1, 1, 3);
+
+SELECT users.first_name, users.last_name, pets.name as "pet name" FROM pets
+JOIN users
+ON users.id = pets.user_id;
