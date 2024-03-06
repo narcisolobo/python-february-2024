@@ -94,7 +94,7 @@ If we wanted to change Gladys Knight's email address, we could do that like so:
 
 ```sql
 UPDATE users
-SET email = gladys@gladysknight.com
+SET email = "gladys@gladysknight.com"
 WHERE id = 3;
 ```
 
