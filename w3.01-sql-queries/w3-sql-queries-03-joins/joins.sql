@@ -1,4 +1,4 @@
-SELECT * FROM pets RIGHT JOIN users
+SELECT * FROM users LEFT JOIN pets
 ON users.id = pets.user_id;
 
 INSERT INTO pets

@@ -3,7 +3,7 @@
 Flask is a web application framework for Python that follows the concept of routing and view functions. These two components play a crucial role in defining the behavior and structure of your web application.
 
 ## Routing:
-Routing refers to the process of mapping URLs to specific functions in your Flask application. It determines how different URLs will be handled and which code will execute when a particular URL is accessed.
+Routing refers to the process of mapping URL requests to specific functions in your Flask application. It determines how different URL requests will be handled and which code will execute when a particular URL is requested.
 
 ### Decorators `@app.route()`
 In Flask, routing is achieved through the use of decorators, specifically the `@app.route()` decorator.
@@ -17,7 +17,7 @@ def home():
 #### Dynamic routing with route parameters
 ```py
 @app.route("/projects/<int:project_id>")
-def home(project_id):
+def project_details(project_id):
   return f"Viewing project {project_id}."
 ```
 
