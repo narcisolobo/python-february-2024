@@ -1,6 +1,21 @@
 {
-	"devDependencies": {
-		"prettier": "^3.2.5",
-		"prettier-plugin-jinja-template": "^1.3.2"
-	}
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-jinja-template": "^1.3.2"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-jinja-template"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "*.html"
+        ],
+        "options": {
+          "parser": "jinja-template"
+        }
+      }
+    ]
+  }
 }
