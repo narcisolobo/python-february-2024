@@ -3,7 +3,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route("/play")
+@app.route("/")
 def index():
     return render_template("index.html", y=8, x=8, color0="black", color1="red")
 
@@ -24,4 +24,4 @@ def play_y_x_color(y, x, color0, color1):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="localhost", port=5001)
+    app.run(debug=True, host="localhost", port=5500)
