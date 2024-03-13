@@ -10,6 +10,9 @@
   "files.associations": {
     "*.html": "jinja-html"
   },
+  "emmet.includeLanguages": {
+    "jinja-html": "html"
+  },
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#8fc6f4",
     "activityBar.background": "#8fc6f4",

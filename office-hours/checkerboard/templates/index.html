@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkerboard</title>
+    <style>
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+        width: fit-content;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+      }
+      .color0 {
+        background-color: {{ color0 }};
+      }
+      .color1 {
+        background-color: {{ color1 }};
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Checkerboard</h1>
+      {% for row in range(y) %}
+        <div class="flex">
+          {% for col in range(x) %}
+            <div class="box color{{ (row + col) % 2  }}"></div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+  </body>
+</html>
