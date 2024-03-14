@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pets CRUD</title>
+  </head>
+  <body>
+    <h1>PETS CRUD</h1>
+    <a href="/pets/new">Add a pet!</a>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Birthday</th>
+          <th>Derpy?</th>
+          <th>Created At</th>
+          <th>Updated At</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for pet in pets %}
+          <tr>
+            <td>{{ pet.id }}</td>
+            <td>{{ pet.name }}</td>
+            <td>{{ pet.type }}</td>
+            <td>{{ pet.birthday }}</td>
+            <td>{{ pet.is_derpy }}</td>
+            <td>{{ pet.created_at }}</td>
+            <td>{{ pet.updated_at }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -10,7 +10,8 @@ def index():
     return render_template("index.html")
 
 
-@app.post("/process")
+@app.post("/process")  # equivalent to below
+@app.route("/process", methods=["POST"])
 def process():
     """The route that processes the form."""
     print("USERNAME: ", request.form["username"])

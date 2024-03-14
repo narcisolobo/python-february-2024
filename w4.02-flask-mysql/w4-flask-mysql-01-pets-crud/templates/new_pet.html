@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add a Pet</title>
+  </head>
+  <body>
+    <h1>Add a Pet</h1>
+    <a href="/pets">Back to view all</a>
+    <form action="/pets/create" method="post">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="type">Type:</label>
+        <input type="text" name="type" id="type" />
+      </div>
+      <div>
+        <label for="birthday">Birthday:</label>
+        <input type="date" name="birthday" id="birthday" />
+      </div>
+      <fieldset>
+        <legend>Is your pet derpy?</legend>
+        <input type="radio" name="is_derpy" id="yes" value="1" />
+        <label for="yes">Yes, totes derpy!</label>
+        <input type="radio" name="is_derpy" id="no" value="0" />
+        <label for="no">Absolutely not.</label>
+      </fieldset>
+      <button type="submit">Add Pet</button>
+    </form>
+  </body>
+</html>
