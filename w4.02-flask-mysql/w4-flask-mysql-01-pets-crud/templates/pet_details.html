@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/quartz.css') }}"
+    />
+    <title>Pet Details</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card my-3">
+        <div class="card-body">
+          <h1 class="display-3">Pet Details</h1>
+          <h2 class="card-title">{{ pet.name }}</h2>
+          <p class="card-text">
+            {{ pet.name }} is a {{ pet.type }} born on {{ pet.birthday }} and is
+            {{ 'totally' if pet.is_derpy else 'not' }} derpy!
+          </p>
+        </div>
+      </div>
+
+      <div class="text-end">
+        <a class="btn btn-primary" href="/pets">Back to view all</a>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
