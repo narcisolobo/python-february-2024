@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="display-3">Add a Record</h1>
+  <div class="card shadow">
+    <div class="card-body">
+      <form action="/records/create" method="post">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            name="title"
+            id="title"
+            class="form-control"
+            placeholder="Title:"
+          />
+          <label for="title">Title:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            name="artist"
+            id="artist"
+            class="form-control"
+            placeholder="Artist:"
+          />
+          <label for="artist">Artist:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            name="genre"
+            id="genre"
+            class="form-control"
+            placeholder="Genre:"
+          />
+          <label for="genre">Genre:</label>
+        </div>
+        <div class="text-end">
+          <button type="submit" class="btn btn-primary">Add Record</button>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="display-3">Record Details</h1>
+  <div class="card shadow">
+    <div class="card-body">
+      <h2 class="card-title">{{ record.title }}</h2>
+      <p><strong>Artist: </strong>{{ record.artist }}</p>
+      <p><strong>Genre: </strong>{{ record.genre }}</p>
+    </div>
+  </div>
+{% endblock content %}

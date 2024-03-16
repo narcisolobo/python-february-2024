@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="display-3">Edit Record</h1>
+  <div class="card shadow">
+    <div class="card-body">
+      <form action="/records/update" method="post">
+        <input type="hidden" name="record_id" value="{{ record.id }}" />
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            name="title"
+            id="title"
+            class="form-control"
+            placeholder="Title:"
+            value="{{ record.title }}"
+          />
+          <label for="title">Title:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            name="artist"
+            id="artist"
+            class="form-control"
+            placeholder="Artist:"
+            value="{{ record.artist }}"
+          />
+          <label for="artist">Artist:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            name="genre"
+            id="genre"
+            class="form-control"
+            placeholder="Genre:"
+            value="{{ record.genre }}"
+          />
+          <label for="genre">Genre:</label>
+        </div>
+        <div class="text-end">
+          <button type="submit" class="btn btn-primary">Edit Record</button>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock content %}
