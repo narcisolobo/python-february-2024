@@ -1,0 +1,10 @@
+header {
+  min-height: 18rem;
+  overflow: hidden;
+}
+
+.background {
+  inset: 0;
+  filter: brightness(50%);
+  background-position: bottom;
+}
