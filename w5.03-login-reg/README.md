@@ -16,7 +16,7 @@ Your `User` class will require two static methods and three class methods.
 **Class Methods:**
 1. A register method to create a `User` object. This is your SQL `INSERT` query.
 2. A method that finds a user in the `users` table by `email`. This is used by both the login and register routes.
-3. A method that finds a user in the `users` table by `id`. This is any routes that need to display the information of the currently logged-in user.
+3. A method that finds a user in the `users` table by `id`. This is for any routes that need to display the information of the currently logged-in user.
 
 ## Controller Methods
 In your `users.py` controller, you'll need at least four routes:
@@ -29,3 +29,8 @@ In your `users.py` controller, you'll need at least four routes:
 This is the route that will ultimately insert a new user into the database. Plan out the flow before diving in.
 
 ![register-flow](./assets/register-flow.png)
+
+**Processing the login form:**
+This is the route that authenticates the user by checking if the user exists and verifying their password. Plan out the flow before diving in.
+
+![login-flow](./assets/login-flow.png)
