@@ -1,13 +1,43 @@
 # Login-Reg
 A guide to implementing login and registration features for your Flask application.
 
-## Creating the ERD
-Create the ERD for your `users` table as usual, but there is one thing to remember.
+## Folder Structure
+This assignment should be modularized. Here is the folder structure.
 
-**Make sure the password column is long enough. It needs to have at least a 60-character limit.**
+You may not have a CSS file if you're using Bootstrap or just not styling the assignment. If you don't, you can safely ignore the static folder.
+
+You probably won't have any images or JavaScript files unless you're really going all out on the front end. If you do though, they would go in the static folder in appropriate sub-folders.
+```
+.
+└── login-reg
+    ├── Pipfile
+    ├── Pipfile.lock
+    ├── flask_app
+    │   ├── __init__.py
+    │   ├── config
+    │   │   └── mysqlconnection.py
+    │   ├── controllers
+    │   │   └── users.py
+    │   ├── models
+    │   │   └── user.py
+    │   ├── static
+    │   │   └── css
+    │   │       └── style.css
+    │   └── templates
+    │       ├── dashboard.html
+    │       └── index.html
+    └── server.py
+```
+
+## Creating the ERD
+Create the ERD for your `users` table as usual. Your table will have `id`, `first_name`, `last_name`, `email`, `password`, `created_at`, and `updated_at` columns.
+
+**Make sure the password column is long enough. It needs to have at least a 60-character limit to accommodate the hash.**
 
 ## Creating the `User` Class
-Your `User` class will require two static methods and three class methods.
+The attributes listed in your constructor will be the same as the columns in the database. Just use the same name for everything and make it easy on yourself.
+
+You will require two static methods and three class methods.
 
 **Static Methods:**
 1. A validation method for your registration form.
@@ -18,7 +48,7 @@ Your `User` class will require two static methods and three class methods.
 2. A method that finds a user in the `users` table by `email`. This is used by both the login and register routes.
 3. A method that finds a user in the `users` table by `id`. This is for any routes that need to display the information of the currently logged-in user.
 
-## Controller Methods
+## Controller View Functions
 In your `users.py` controller, you'll need at least four routes:
 1. A route to display the login and register forms
 2. A route to process the register form
