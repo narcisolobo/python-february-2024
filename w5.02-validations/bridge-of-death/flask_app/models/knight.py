@@ -1,4 +1,6 @@
+from flask import flash
 from flask_app.config.mysqlconnection import connectToMySQL
+from datetime import datetime
 
 
 class Knight:
@@ -13,6 +15,49 @@ class Knight:
         self.is_afraid = data["is_afraid"]
         self.created_at = data["created_at"]
         self.updated_at = data["updated_at"]
+
+    @staticmethod
+    def form_is_valid(form_data):
+        """This method validates the knight form."""
+
+        is_valid = True
+
+        if len(form_data["username"].strip()) == 0:
+            is_valid = False
+            flash("Please enter name.")
+        elif len(form_data["username"].strip()) < 3:
+            is_valid = False
+            flash("Name must be at least three characters.")
+        if len(form_data["quest"].strip()) == 0:
+            is_valid = False
+            flash("Please enter quest.")
+        elif len(form_data["quest"].strip()) < 3:
+            is_valid = False
+            flash("Quest must be at least three characters.")
+        if "favorite_color" not in form_data:
+            is_valid = False
+            flash("Please select color.")
+        elif form_data["favorite_color"] not in ["blue", "yellow"]:
+            is_valid = False
+            flash("Invalid color chosen.")
+        if len(form_data["birthday"].strip()) == 0:
+            is_valid = False
+            flash("Please enter birthday.")
+        else:
+            try:
+                date_object = datetime.strptime(form_data["birthday"], "%m-%d-%Y")
+                print(type(date_object))
+            except:
+                is_valid = False
+                flash("Invalid birthday value.")
+        if "is_afraid" not in form_data:
+            is_valid = False
+            flash("Please select scared option.")
+        elif form_data["is_afraid"] not in ["0", "1"]:
+            is_valid = False
+            flash("Invalid scared option.")
+
+        return is_valid
 
     @classmethod
     def create(cls, form_data):

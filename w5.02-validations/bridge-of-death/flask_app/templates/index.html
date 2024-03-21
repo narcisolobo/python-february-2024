@@ -39,7 +39,25 @@
           />
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6">
-          <form action="" method="post" class="card shadow">
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              {% for message in messages %}
+                <div
+                  class="alert alert-warning alert-dismissible fade show"
+                  role="alert"
+                >
+                  {{ message }}
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Close"
+                  ></button>
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          <form action="/knights/create" method="post" class="card shadow">
             <div class="card-body">
               <div class="mb-3">
                 <label for="username" class="form-label">
@@ -96,6 +114,7 @@
                     type="radio"
                     name="is_afraid"
                     id="yes"
+                    value="1"
                   />
                   <label class="form-check-label" for="yes">Yes</label>
                 </div>
@@ -105,6 +124,7 @@
                     type="radio"
                     name="is_afraid"
                     id="No"
+                    value="0"
                   />
                   <label class="form-check-label" for="No">No</label>
                 </div>
@@ -117,5 +137,10 @@
         </div>
       </div>
     </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
