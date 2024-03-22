@@ -10,6 +10,7 @@ You probably won't have any images or JavaScript files unless you're really goin
 ```
 .
 └── login-reg
+    ├── users_erd.mwb
     ├── Pipfile
     ├── Pipfile.lock
     ├── flask_app
@@ -32,7 +33,7 @@ You probably won't have any images or JavaScript files unless you're really goin
 ## Creating the ERD
 Create the ERD for your `users` table as usual. Your table will have `id`, `first_name`, `last_name`, `email`, `password`, `created_at`, and `updated_at` columns.
 
-**Make sure the password column is long enough. It needs to have at least a 60-character limit to accommodate the hash.**
+**Make sure the password column is long enough. It needs to have at least a 256-character limit to accommodate the hash.**
 
 ## Creating the `User` Class
 The attributes listed in your constructor will be the same as the columns in the database. Just use the same name for everything and make it easy on yourself.
@@ -54,6 +55,7 @@ In your `users.py` controller, you'll need at least four routes:
 2. A route to process the register form
 3. A route to process the login form
 4. A route to log the user out
+5. A route to display the dashboard
 
 **Processing the register form:**
 This is the route that will ultimately insert a new user into the database. Plan out the flow before diving in.
