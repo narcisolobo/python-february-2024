@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+requests = "*"
+python-dotenv = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
+
+[scripts]
+watch-css = "npx tailwindcss -i ./marvel/css/tailwind.postcss -o ./marvel/static/css/style.css --watch"
+dev = "flask --app marvel/app run -h localhost -p 5150 --debug"

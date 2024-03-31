@@ -1,0 +1,25 @@
+{% extends '/shared/base.html' %}
+
+{% block content %}
+  <h1 class="text-6xl mb-6">THE MARVEL API</h1>
+  {% include '/shared/error.html' %}
+  {% if results %}
+    <h2 class="text-3xl mb-3">Results:</h2>
+    <div class="character-grid">
+      {% for result in results %}
+        <div class="card bg-base-300 shadow">
+          <figure>
+            <img
+              src="{{ result.thumbnail.path }}.{{ result.thumbnail.extension }}"
+              alt="{{ result.name }}"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">{{ result.name }}</h2>
+            <p>{{ result.description }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endblock content %}

@@ -1,0 +1,15 @@
+{
+  "name": "marvel-project",
+  "version": "1.0.0",
+  "description": "A Flask project demonstrating the Requests library.",
+  "main": "none",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Narciso Lobo",
+  "license": "ISC",
+  "devDependencies": {
+    "daisyui": "^4.9.0",
+    "tailwindcss": "^3.4.3"
+  }
+}
