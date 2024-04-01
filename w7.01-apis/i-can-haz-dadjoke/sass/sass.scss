@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+$body-bg: #faf3dc;
+$font-family-base: "Poppins", sans-serif;
+$font-weight-base: 300;
+$headings-font-weight: 600;
+
+$primary: #9b5de5;
+$success: #00f5d4;
+$info: #00bbf9;
+$warning: #fee440;
+$danger: #f15bb5;
+
+@import "../bootstrap/scss/bootstrap";
