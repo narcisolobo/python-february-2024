@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" />
+{% endblock styles %}
+
+{% block content %}
+  <h1 class="display-3">PETS CRUD</h1>
+  {%- macro input(name, value='', type='text', size=20) -%}
+    <input
+      type="{{ type }}"
+      name="{{ name }}"
+      value="{{ value|e }}"
+      size="{{ size }}"
+      class="form-control"
+    />
+  {%- endmacro -%}
+
+  <p>{{ input('username') }}</p>
+  <p>{{ input('password', type='password') }}</p>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Birthday</th>
+        <th>Derpy?</th>
+        <th>Created At</th>
+        <th>Updated At</th>
+        <th>Actions:</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for pet in pets|reverse %}
+        <tr>
+          <td>{{ pet.id }}</td>
+          <td>
+            <a href="/pets/{{ pet.id }}">{{ pet.name }}</a>
+          </td>
+          <td class="align-middle">{{ pet.type }}</td>
+          <td class="align-middle">{{ pet.birthday|format_birthday }}</td>
+          <td class="align-middle">{{ 'Yes' if pet.is_derpy else 'No' }}</td>
+          <td class="align-middle">{{ pet.created_at|format_date }}</td>
+          <td class="align-middle">{{ pet.updated_at|format_date }}</td>
+          <td class="d-flex gap-2">
+            <a href="/pets/{{ pet.id }}/edit" class="btn btn-sm btn-primary"
+              >Edit</a
+            >
+            <form action="/pets/{{ pet.id }}/delete" method="post">
+              <button type="submit" class="btn btn-sm btn-danger">
+                Delete
+              </button>
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div class="text-end">
+    <a class="btn btn-warning" href="/pets/new">Add a pet!</a>
+  </div>
+{% endblock content %}

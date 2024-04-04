@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ pet.name }} Details{% endblock title %}
+
+{% block content %}
+  <div class="card my-3">
+    <div class="card-body">
+      <h1 class="display-3">Pet Details</h1>
+      <h2 class="card-title">{{ pet.name }}</h2>
+      <p class="card-text">
+        {{ pet.name }} is a {{ pet.type }} born on {{ pet.birthday }} and is
+        {{ 'totally' if pet.is_derpy else 'not' }} derpy!
+      </p>
+    </div>
+  </div>
+
+  <div class="text-end">
+    <a class="btn btn-primary" href="/pets">Back to view all</a>
+  </div>
+{% endblock content %}
