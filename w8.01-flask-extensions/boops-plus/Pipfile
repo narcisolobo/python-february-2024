@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+pymysql = "*"
+flask-bcrypt = "*"
+flask-login = "*"
+flask-migrate = "*"
+flask-sqlalchemy = "*"
+flask-wtf = "*"
+python-dotenv = "*"
+email-validator = "*"
+python-dateutil = "*"
+inflect = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
+
+[scripts]
+dev = "flask --app boops/app run -h 'localhost' -p 5250 --debug"
+migrate = "flask --app boops/app db migrate -m"
+upgrade = "flask --app boops/app db upgrade"

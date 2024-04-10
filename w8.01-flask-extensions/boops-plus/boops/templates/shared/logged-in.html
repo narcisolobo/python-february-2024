@@ -1,0 +1,8 @@
+<li class="nav-item">
+  <a
+    href="{{ url_for('pets.pets') }}"
+    class="nav-link {{ 'active' if request.path == url_for('pets.pets') }}"
+    aria-current="{{ 'page' if request.path == url_for('pets.pets') else 'false' }}">
+    Pets Dashboard
+  </a>
+</li>

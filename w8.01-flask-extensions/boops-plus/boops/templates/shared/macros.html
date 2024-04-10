@@ -1,0 +1,14 @@
+{% macro with_errors(field) %}
+  <div class="form-floating mb-3">
+    {% if field.errors %}
+      {% set css_class = 'form-control is-invalid ' + kwargs.pop('class', '') %}
+      {{ field(class=css_class, **kwargs) }}
+      {% for error in field.errors %}
+        <div class="invalid-feedback">{{ error }}</div>
+      {% endfor %}
+    {% else %}
+      {{ field(**kwargs) }}
+    {% endif %}
+    {{ field.label }}
+  </div>
+{% endmacro %}

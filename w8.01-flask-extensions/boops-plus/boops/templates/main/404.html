@@ -1,0 +1,20 @@
+{% extends '/shared/base.html' %}
+
+{% block title %}Not Found{% endblock title %}
+
+{% block content %}
+  <h1 class="display-4 mb-4">Oops...</h1>
+  <p class="lead">We couldn't find that page or resource.</p>
+  <pre>{{ err }}</pre>
+  <button type="button" class="btn btn-primary" onclick="goBack()">
+    Go back
+  </button>
+{% endblock content %}
+
+{% block script %}
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+{% endblock script %}

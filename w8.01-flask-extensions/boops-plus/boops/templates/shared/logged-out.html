@@ -1,0 +1,16 @@
+<li class="nav-item">
+  <a
+    href="{{ url_for('auth.sign_up') }}"
+    class="nav-link {{ 'active' if request.path == url_for('auth.sign_up') }}"
+    aria-current="{{ 'page' if request.path == url_for('auth.sign_up') else 'false' }}">
+    Sign Up
+  </a>
+</li>
+<li class="nav-item">
+  <a
+    href="{{ url_for('auth.sign_in') }}"
+    class="nav-link {{ 'active' if request.path == url_for('auth.sign_in') }}"
+    aria-current="{{ 'page' if request.path == url_for('auth.sign_in') else 'false' }}">
+    Sign In
+  </a>
+</li>
