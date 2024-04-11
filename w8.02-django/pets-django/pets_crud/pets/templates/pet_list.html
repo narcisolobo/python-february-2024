@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}
+  All Pets
+{% endblock title %}
+{% block content %}
+  <h1>All Pets</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name:</th>
+        <th>Type:</th>
+        <th>Age:</th>
+        <th>Actions:</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for pet in pets %}
+        <tr>
+          <td class="align-middle">{{ pet.name }}</td>
+          <td class="align-middle">{{ pet.type }}</td>
+          <td class="align-middle">{{ pet.age }}</td>
+          <td class="align-middle d-flex align-items-center gap-2">
+            <a class="btn btn-sm btn-primary" href="{% url 'pet_detail' pet.pk %}">view</a>
+            <a class="btn btn-sm btn-primary" href="{% url 'pet_update' pet.pk %}">edit</a>
+            <a class="btn btn-sm btn-primary" href="{% url 'pet_delete' pet.pk %}">delete</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}

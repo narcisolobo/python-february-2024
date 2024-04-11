@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}
+  Add a Pet
+{% endblock title %}
+{% block content %}
+  <h1>Add a Pet</h1>
+  <form action="{% url 'pet_create' %}" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <div class="form-floating mb-3">
+        {{ field }}
+        {{ field.label_tag }}
+        {% if field.errors %}
+          {% for error in field.errors %}
+            <div class="invalid-feedback">{{ error }}</div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    {% endfor %}
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+{% endblock content %}
