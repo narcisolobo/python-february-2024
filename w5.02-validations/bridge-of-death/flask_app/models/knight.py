@@ -28,18 +28,21 @@ class Knight:
         elif len(form_data["username"].strip()) < 3:
             is_valid = False
             flash("Name must be at least three characters.")
+
         if len(form_data["quest"].strip()) == 0:
             is_valid = False
             flash("Please enter quest.")
         elif len(form_data["quest"].strip()) < 3:
             is_valid = False
             flash("Quest must be at least three characters.")
+            
         if "favorite_color" not in form_data:
             is_valid = False
             flash("Please select color.")
         elif form_data["favorite_color"] not in ["blue", "yellow"]:
             is_valid = False
             flash("Invalid color chosen.")
+            
         if len(form_data["birthday"].strip()) == 0:
             is_valid = False
             flash("Please enter birthday.")
@@ -50,6 +53,7 @@ class Knight:
             except:
                 is_valid = False
                 flash("Invalid birthday value.")
+                
         if "is_afraid" not in form_data:
             is_valid = False
             flash("Please select scared option.")
